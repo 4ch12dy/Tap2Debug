@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "sh",
+    "reveal": "always",
+    "args": [
+        "-c"
+    ],
+    "tasks": [
+        {
+            "label": "make: Build Project",
+            "args": [
+                "${workspaceRoot}/build.sh"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "uninstall: Uninstall Tweak",
+            "args": [
+                "${workspaceRoot}/build.sh uninstall"
+            ]
+        }
+    ]
+
+}
