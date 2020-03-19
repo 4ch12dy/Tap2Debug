@@ -184,7 +184,7 @@ NSString* toggleOneTimeApplicationID;
 	// id rootFolderController = MSHookIvar<id>(self.delegate, "_rootFolderController");
 	SBIconController* sbivc = self.delegate;
 	id rootFolderController = sbivc._rootFolderController;
-    XLOG(@"tap on app:%@ vc:%@ rootFolderController:%@", bundleID, arg1, rootFolderController);
+	XLOG(@"tap on app:%@ vc:%@ rootFolderController:%@", bundleID, arg1, rootFolderController);
 	[self dismissAnimated:YES withCompletionHandler:^{
 		GCD_AFTER_MAIN(0.01)
 			show_debug_view(rootFolderController, bundleID);
