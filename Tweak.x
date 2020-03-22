@@ -77,7 +77,7 @@ void show_debug_view(UIViewController* showVC, NSString* _bundleid){
     if(last_ip!=nil){
         ip_port = last_ip;
     }
-    XLOG("1111");
+
     Class LSApplicationProxy_class = objc_getClass("LSApplicationProxy");
     NSObject* proxyObj = [LSApplicationProxy_class performSelector:@selector(applicationProxyForIdentifier:) withObject:bundle];
 	NSString * canonicalExecutablePath = [proxyObj performSelector:@selector(canonicalExecutablePath)];
@@ -183,13 +183,12 @@ void show_debug_view(UIViewController* showVC, NSString* _bundleid){
             task = nil;
         }
     }];
-    XLOG("2222");
+
     [panel addAction:okaction];
     [panel addAction:stopAction];
     [panel addAction:cancelaction];
     XLOG("vc:%@", vc);
     [vc presentViewController:panel animated:YES completion:nil];
-    XLOG("3333");
 }
 
 %hook SBIconView
@@ -197,11 +196,9 @@ void show_debug_view(UIViewController* showVC, NSString* _bundleid){
 %new
 -(void)handleDoubleClick:(UITapGestureRecognizer*)doubleTap
 {
-	XLOG(@"double click begin");
     NSString* bid = self.icon.application.bundleIdentifier;
 	XLOG(@"id:%@",bid);
     show_debug_view([self findViewController], bid);
-    XLOG(@"double click end");
 }
 %end
 
