@@ -3,7 +3,7 @@ tap shortcut(double tap app icon is deault close because app will pause) to debu
 
 
 
-### install
+### Install
 
 - compile deb from source code 
 
@@ -12,6 +12,16 @@ tap shortcut(double tap app icon is deault close because app will pause) to debu
 - install from cydia repo:https://xia0z.github.io  search:Tap2Debug
 
 
+
+### Screenshots
+
+- iOS12
+
+  <img src="screenshots/iOS12.png" width="400" hegiht="200" align=center />  
+  
+- iOS13
+  <img src="screenshots/iOS13.png" width="400" hegiht="200" align=center />
+  <img src="screenshots/iOS13show.png" width="400" hegiht="200" align=center />
 
 ### Credit
 
