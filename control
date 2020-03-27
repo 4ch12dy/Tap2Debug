@@ -1,7 +1,7 @@
 Package: com.xia0.tap2debug
 Name: Tap2Debug
 Depends: mobilesubstrate
-Version: 0.0.7
+Version: 0.0.8
 Architecture: iphoneos-arm
 Description: tap shortcut(double tap app icon is deault close because app will pause) to debug app (support iOS11/12/13 and A12)
 Maintainer: xia0 & dodo
